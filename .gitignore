@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Build / package artifacts
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Logs
+*.log

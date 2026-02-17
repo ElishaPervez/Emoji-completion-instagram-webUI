@@ -1,0 +1,59 @@
+#emoji-completer-popup {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 220px;
+  max-width: 320px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: #111217;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  padding: 6px;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #f6f7fb;
+}
+
+#emoji-completer-popup[hidden] {
+  display: none;
+}
+
+.emoji-completer-option {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.emoji-completer-option:hover,
+.emoji-completer-option[data-selected="true"] {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.emoji-completer-char {
+  font-size: 18px;
+  text-align: center;
+}
+
+.emoji-completer-code {
+  font-size: 13px;
+  color: #f0f1f5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emoji-completer-alias {
+  font-size: 11px;
+  color: #a9adba;
+  white-space: nowrap;
+}
+
+.emoji-completer-empty {
+  padding: 8px;
+  font-size: 12px;
+  color: #a9adba;
+}
