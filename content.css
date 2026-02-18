@@ -5,6 +5,7 @@
   max-width: 320px;
   max-height: 280px;
   overflow-y: auto;
+  overflow-x: hidden;
   background: #111217;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
@@ -20,12 +21,13 @@
 
 .emoji-completer-option {
   display: grid;
-  grid-template-columns: 30px 1fr auto;
+  grid-template-columns: 30px minmax(0, 1fr) minmax(0, 110px);
   align-items: center;
   gap: 8px;
   padding: 7px 8px;
   border-radius: 8px;
   cursor: pointer;
+  min-width: 0;
 }
 
 .emoji-completer-option:hover,
@@ -41,6 +43,7 @@
 .emoji-completer-code {
   font-size: 13px;
   color: #f0f1f5;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -49,7 +52,12 @@
 .emoji-completer-alias {
   font-size: 11px;
   color: #a9adba;
+  min-width: 0;
+  max-width: 110px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: end;
 }
 
 .emoji-completer-empty {

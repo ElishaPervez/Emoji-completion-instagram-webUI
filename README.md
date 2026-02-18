@@ -40,6 +40,8 @@ Configurable:
 - optional basic emoticon conversion (`:)`, `:D`, `<3`)
 
 ## Important Notes
-- This build ships with a curated emoji dataset (common shortcodes + aliases), not a full Slack/Discord export.
+- This build now ships with a full RGI emoji dataset (including flags, modifiers, and ZWJ sequences) with expanded aliases/keywords.
+- To regenerate `emoji-data.js` from local packaged sources, run:
+  - `python scripts\\generate_emoji_data.py`
 - Instagram DOM changes can impact editor detection; selectors are conservative to reduce breakage.
 - Undo behavior depends on how Instagram's editor reconciles synthetic input events.
